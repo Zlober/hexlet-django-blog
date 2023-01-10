@@ -1,0 +1,13 @@
+/.idea/.gitignore
+/hexlet_django_blog/article/migrations/__init__.py
+/hexlet_django_blog/article/__init__.py
+/hexlet_django_blog/article/admin.py
+/hexlet_django_blog/article/apps.py
+/.idea/hexlet-django-blog.iml
+/.idea/misc.xml
+/hexlet_django_blog/article/models.py
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/hexlet_django_blog/article/tests.py
+/.idea/vcs.xml
+/hexlet_django_blog/article/views.py
