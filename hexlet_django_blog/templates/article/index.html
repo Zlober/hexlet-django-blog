@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+			{{ message }}
+{% endfor %}
+{% endif %}
+<div><a href="{% url 'article_create'%}">Добавить статью</a> </div>
+    <h1>Список статей</h1>
+    {% for article in articles %}
+        <div><a href="{% url 'articles_update' article.id%}">Изменить статью</a> </div>
+        <div>
+            <form action="{% url 'article_delete' article.id%}" method="post">
+                {% csrf_token %}
+                <input type="submit" value="Удалить статью">
+            </form>
+        <div><a href="{% url 'show_article' article.id %}"> {{ article.name }}</a></div>
+        <div>{{ article.body|slice:":200" }}</div>
+    {% endfor %}
+{% endblock %}
